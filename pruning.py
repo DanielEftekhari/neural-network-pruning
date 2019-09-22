@@ -6,7 +6,7 @@ def weight_prune(weights, k):
     Prune <weights> for a given layer, removing <k> fraction of them.
     Note that this removes the smallest <k> fraction of any weights in the weight matrix, so that in most scenarios
     every neuron will have surviving connections. This has important effects in model performance,
-    compared to the <unit_prune> approach (see <unit_prune> function and attached report).
+    compared to the <unit_prune> approach (see <unit_prune> function and attached report in <./docs>).
 
     Special note: a heap data structure (using heapq library) was investigated in place of using sort,
     for identifying the smallest <k> fraction of weights. Asymptotically, a heap data structure is O(n log(nk)), k < 1,
@@ -31,7 +31,7 @@ def unit_prune(weights, k):
     Prune all weights corresponding to a unit in a given layer, for <k> fraction of the units.
     Note that this removes the smallest <k> fraction of units in the weight matrix, so that entire neurons are dropped.
     This has important effects in model performance, compared to the <weight_prune> approach
-    (see <weight_prune> function and attached report).
+    (see <weight_prune> function and attached report in <./docs>).
 
     Special note: see special note in function <weight_prune>.
     """
