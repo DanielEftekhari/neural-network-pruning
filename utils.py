@@ -17,7 +17,7 @@ def make_dirs(path, replace):
 
 def calculate_acc(x, y):
     y_hat_class = torch.argmax(x, dim=-1)
-    acc = (y_hat_class == y).sum() / y.shape[0]
+    acc = (y_hat_class == y).type(torch.FloatTensor).sum() / y.shape[0]
     return acc
 
 
