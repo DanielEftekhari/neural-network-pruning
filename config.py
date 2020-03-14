@@ -4,7 +4,7 @@ parser = argparse.ArgumentParser(description='MNIST-SPARSE')
 
 
 def parsebool(x):
-    return x.lower() is 'true'
+    return x.lower() == 'true'
 
 
 def add_argument_group(name):
